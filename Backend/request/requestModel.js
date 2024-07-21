@@ -21,7 +21,7 @@ const requestSchema = new Schema({
   },
 
   requestStatus: {
-    type: Number,
+    type: String,
     required: true
   },
   

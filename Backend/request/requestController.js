@@ -12,6 +12,7 @@ const createRequest = async (req, res) => {
 
     res.status(201).json(request);
   } catch (error) {
+    console.error('Error creating request:', error);
     res.status(500).json({ error: 'Internal server error' });
   }
 }
