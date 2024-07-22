@@ -5,7 +5,7 @@ const express = require('express')
 const mongoose = require('mongoose')
 
 // Require route files
-//const customerRoute = require('./customer/customerRoute')
+const customerRoute = require('./customer/customerRoute')
 const requestRoute = require('./request/requestRoute')
 
 const app = express()
@@ -19,7 +19,7 @@ app.use((req, res, next) => {
 })
 
 // Routes
-//app.use('/api/customers', customerRoute)
+app.use('/api/customers', customerRoute)
 app.use('/api/requests', requestRoute)
 
 // Connect to DB and start server
